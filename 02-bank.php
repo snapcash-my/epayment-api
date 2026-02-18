@@ -33,8 +33,7 @@ if($mode == 'fpx'){
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
     <title>E-Payment</title>
@@ -120,7 +119,16 @@ if($mode == 'fpx'){
                     });
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus, errorThrown);
+                    try {
+                        var response = JSON.parse(jqXHR.responseText);
+                        if(response.status == 'error'){
+                            alert(response.message);
+                        } else {
+                            alert('Ralat: ' + textStatus + ' - ' + errorThrown);
+                        }
+                    } catch(e) {
+                        alert('Ralat: ' + textStatus + ' - ' + errorThrown);
+                    }
                 }
             });
         }

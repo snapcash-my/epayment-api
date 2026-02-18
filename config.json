@@ -3,23 +3,17 @@
         "environment": "Staging",
         "exchange-id":
         {
-            "Ambank (Reliva)": "EX00021844",
-            "Bank Islam (Snapcash)": "EX00035765",
-            "Sandbox (Reliva)": "EX00002877",
-            "Bank Islam (DBKL)": "EX00002640"
+            "Bank Islam (Snapcash)": "EX00035765"
         },
         "merchant-code": 
         {
-            "ambank": "Reliva Ambank",
-            "bankislam": "Reliva Bank Islam",
-            "sandbox": "Reliva Sandbox",
-            "test": "DBKL Bank Islam"
+            "snapcash": "Snapcash Bank Islam"
         },
-        "default-exchange": "EX00002640",
-        "url": "https://epayment-stg.snapcash.com.my/eps/request"
+        "default-exchange": "EX00035765",
+        "url": "https://epay-stg.snapcash.com.my/eps/request"
     },
     "stringer": {
-        "url": "https://epayment-stg.snapcash.com.my/stringer"
+        "url": "https://epay-stg.snapcash.com.my/stringer"
     },
     "cache": "3000",
     "callback": "https://fpx.snapcash.com.my/action.php?id=response"
