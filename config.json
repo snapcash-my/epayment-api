@@ -1,10 +1,10 @@
 {
     "fpx": {
-        "environment": "Production",
+        "environment": "Staging",
         "exchange-id":
         {
             "Ambank (Reliva)": "EX00021844",
-            "Bank Islam (Reliva)": "EX00023174",
+            "Bank Islam (Snapcash)": "EX00035765",
             "Sandbox (Reliva)": "EX00002877",
             "Bank Islam (DBKL)": "EX00002640"
         },
@@ -16,11 +16,11 @@
             "test": "DBKL Bank Islam"
         },
         "default-exchange": "EX00002640",
-        "url": "https://epayment.dbkl.gov.my/eps/request"
+        "url": "https://epayment-stg.snapcash.com.my/eps/request"
     },
     "stringer": {
-        "url": "https://epayment.dbkl.gov.my/stringer"
+        "url": "https://epayment-stg.snapcash.com.my/stringer"
     },
     "cache": "3000",
-    "callback": "https://fpx.reliva.com.my/action.php?id=response"
+    "callback": "https://fpx.snapcash.com.my/action.php?id=response"
 }
