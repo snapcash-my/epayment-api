@@ -33,7 +33,6 @@
                                         <select class="form-control" name="EXCHANGE_ID" id="exchange_id">
                                             <?php
                                             $config = json_decode(file_get_contents('config.json'), true);
-echo $config;
                                             foreach ($config['fpx']['exchange-id'] as $bank => $id) {
                                                 echo "<option value=\"$id\">$bank - $id</option>";
                                             }
@@ -61,7 +60,7 @@ echo $config;
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="trans_id" class="col-12 col-md-4 col-form-label">ID Transaksi Pelanggan (mesti unik) <span class="text-danger">*</span></label>
+                                    <label for="trans_id" class="col-12 col-md-4 col-form-label">ID Transaksi Pelanggan <span class="text-danger">*</span></label>
                                     <div class="col-12 col-md-8">
                                         <input type="text" class="form-control" name="ORDER_ID" value="<?php echo uniqid('UAT_'); ?>">
                                     </div>
@@ -99,13 +98,13 @@ echo $config;
                                 <div class="mb-3 row">
                                     <label for="description" class="col-12 col-md-4 col-form-label">Return URL</label>
                                     <div class="col-12 col-md-8">
-                                        <input type="text" class="form-control" name="CALLBACK_URL" value="https://fpx.reliva.com.my/response.php">
+                                        <input type="text" class="form-control" name="CALLBACK_URL" value="https://fpx.snapcash.com.my/response.php">
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="description" class="col-12 col-md-4 col-form-label">Update URL</label>
                                     <div class="col-12 col-md-8">
-                                        <input type="text" class="form-control" name="UPDATE_URL" value="https://fpx.reliva.com.my/action.php?id=update">
+                                        <input type="text" class="form-control" name="UPDATE_URL" value="https://fpx.snapcash.com.my/action.php?id=update">
                                     </div>
                                 </div>
                         </div>
